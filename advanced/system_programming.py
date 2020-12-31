@@ -20,6 +20,12 @@ import time
 #         print("Thread {}, {} end".format(self.name, self.id))
 
 
+def thread_task(thread_name):
+    print("Thread {} start".format(thread_name))
+    time.sleep(2)
+    print(time.time())
+    print("Thread {} end".format(thread_name))
+
 # threads = []
 # for i in range(2):
 #     threads.append(MyThread("thread" + str(i + 1), i + 1))
@@ -32,6 +38,13 @@ import time
 #
 # print("main thread finished")
 
+
+if __name__ == "__main__":
+    thread_pool = ThreadPoolExecutor(5)
+    for i in range(10):
+        thread_pool.submit(thread_task, "thread" + str(i + 1))
+    thread_pool.shutdown()
+    print("Main thread over")
 
 
 # multi process
@@ -89,5 +102,3 @@ def process_task(process_num):
 #     process_pool.join()
 #     print("Main process finished")
 
-if __name__ == "__main__":
-    thread_pool = ThreadPoolExecutor()
