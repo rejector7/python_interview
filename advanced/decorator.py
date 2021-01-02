@@ -1,7 +1,9 @@
 import time
+from functools import wraps
 
 
 def run_time(func):
+    @wraps(func)
     def normal_add_run_time(name):
         time1 = time.time()
         func(name)
@@ -17,5 +19,10 @@ def normal_func(name):
     # print("My name is {0}.".format(name))
 
 
-normal_func("rjt")
+# normal_func("rjt")
+# print(normal_func.__name__)
+
+
+
+# @ property
 
