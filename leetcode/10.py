@@ -1,2 +1,2 @@
-a = {1, 2, 3}
-print(type(a))
+a = '11'
+print(a[1:])

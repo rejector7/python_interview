@@ -15,3 +15,4 @@ class Solution:
         return pre_map.get(S, 0)
 
 
+# DP solution, In fact, above solution is similar to DP
