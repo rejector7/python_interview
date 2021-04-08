@@ -1,2 +1,6 @@
-a = '11'
-print(a[1:])
+import heapq
+import sys
+print(sys.maxsize)
+# heap = [2, 3]
+# heapq._heapify_max(heap)
+# print(heap)
