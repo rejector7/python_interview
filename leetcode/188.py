@@ -10,4 +10,5 @@ class Solution:
             for i in range(1, k):
                 min_prices[i] = min(min_prices[i], price - max_profits[i-1])
                 max_profits[i] = max(max_profits[i], price - min_prices[i])
-        return max_profits[k-1]
+        return int(max_profits[k-1])
+
